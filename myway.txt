@@ -1,0 +1,23 @@
+C:\Users\Adam\Desktop\Projects>nvm install 18.17.1  
+Downloading node.js version 18.17.1 (64-bit)... 
+Extracting node and npm...
+Complete
+Installation complete.
+If you want to use this version, type:
+
+nvm use 18.17.1
+
+C:\Users\Adam\Desktop\Projects>nvm use 18.17.1
+Now using node v18.17.1 (64-bit)
+
+C:\Users\Adam\Desktop\Projects>node -v
+v18.17.1
+
+C:\Users\Adam\Desktop\Projects>npm -v
+10.2.1
+
+C:\Users\Adam\Desktop\Projects>npm install -g npm@10.1.0
+
+changed 45 packages in 6s
+
+28 packages are looking for funding

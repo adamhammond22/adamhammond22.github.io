@@ -1,0 +1,9 @@
+# requirements.txt for adamhammond22.github.io
+# No Python dependencies were detected in this project root when this file was created.
+# If you add Python scripts or dependencies later, list them here, for example:
+# requests==2.31.0
+# beautifulsoup4==4.12.2
+
+# Notes:
+# - This repository appears to be a Create React App front-end. There are no Python
+#   packages required to build or deploy the site by default.

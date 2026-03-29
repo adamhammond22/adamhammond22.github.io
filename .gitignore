@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Generated dependency reports (from setup scripts)
+/deps.json
+/audit.json
+/SETUP_AND_DEPENDENCY_REPORT.txt
+/README_NODE_SETUP.md
