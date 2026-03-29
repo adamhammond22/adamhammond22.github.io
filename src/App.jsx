@@ -17,6 +17,7 @@ export const allLinks = {
   github: 'https://github.com/adamhammond22',
   linkedin: 'https://www.linkedin.com/in/adamhammond22/',
   email: 'abhammond22@gmail.com',
+  website: 'https://adamhammond22.github.io'
 }
 
 

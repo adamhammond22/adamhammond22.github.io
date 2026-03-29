@@ -7,7 +7,7 @@ import {Typography, Box, Grid, IconButton} from '@mui/material';
 import {Link as MuiLink} from '@mui/material';
 
 import {Email as EmailIcon, LinkedIn as LinkedInIcon,
-  GitHub as GitHubIcon, Circle as CircleIcon} from '@mui/icons-material';
+  GitHub as GitHubIcon, Circle as CircleIcon, Phone as PhoneIcon, Language as LanguageIcon} from '@mui/icons-material';
 
 import { allLinks } from './App';
 
@@ -26,25 +26,25 @@ const courses = [
   'Principles of Computer System Design',
   'Computer Networks',
 ];
-const languagesKnown = {
+const languagesKnown = [
+  'Python',
+  'JavaScript/TypeScript',
+  'SQL',
+  'C',
+  'C++',
+  'HTML/CSS',
+]
 
-  'Python': 'Proficient',
-  'JavaScript': 'Proficient',
-  'C': 'Proficient',
-  'C++': 'Competent',
-  'SQL': 'Proficient',
-  'HTML/CSS': 'Competent',
-}
+const conceptsKnown = [ 'Full-stack development', 'REST APIs', 'Out-Of-Band Server Management', 'RAID', 'Enterprise Server Solution', 'Agile Development', 'Machine Learning', 'Responsive Web Design']
 
-const conceptsKnown = [ 'Agile Development',  'RESTful APIs', 'Machine Learning', 'Responsive Web Design', 'Full Stack Development']
 
 const technologiesAndTools = [
-  'MongoDB', 'PostgreSQL', 'Git', 'Perforce', 'Docker', 'GDB/Valgrind/Make', 'Batch/Bash scripts'
+  'Git', 'Docker', 'GitHub Actions (CI/CD)', 'MongoDB', 'PostgreSQL', 'Linux', 'Bash'
 ]
 
 
 const frameworksAndLibraries =  [
-  'React', 'React Native', 'Node.js', 'Express.js', 'Flask', 'Pandas', 'PyTorch', 'Hugging Face', 'tkinter']
+  'React', 'Node.js', 'Django', 'Express', 'Flask', 'Selenium', 'Pandas', 'PyTorch']
 
 
 const markupAndFormatting = [
@@ -65,14 +65,8 @@ const leftContentBoxes = () => {
         About Me
         </Typography>
         <Typography variant = "p3" sx={{lineHeight: 2}}>
-          I'm currently searching for a full-time job in Software Engineering, Full Stack Development, or Machine Learning!<br/>
-         
-          I am well acquainted with Agile Development, and I love working with a team or alone!
-          I have a large repertoire of relevant projects publicly available on my GitHub, including this website. 
-          <br/><br/>
-          On a personal note: I enjoy rock climbing, hiking, surfing, music, and of course — coding!<br/>
-          I've always loved solving problems in organized and creative ways, and I hope to find a job where I can do just that.<br/><br/>
-          Feel free to reach out for any reason, you can find my contact information below!<br/><br/>
+          Full-stack oriented application engineer with experience building internal tools, automation systems, and CI/CD pipelines. Experienced in developing and deploying scalable applications while improving engineering workflows through automation. Background in enterprise server environments with focus on BMC management (Redfish/IPMI) and system-level debugging.<br/>
+
         </Typography>
       </Box>
 
@@ -98,7 +92,7 @@ const leftContentBoxes = () => {
           </Box>
           <Typography variant = "p4">
             5x Dean’s Honors Awards<br/>
-            GPA: 3.75
+            GPA: 3.75, Honors
           </Typography>
         </Box>
       </Box>
@@ -125,10 +119,10 @@ const leftContentBoxes = () => {
 
             <Box sx = {{flexGrow: 1}} name='JobNameTitleBox'>
               <Typography variant = "p3">
-                <i><b>Red Tide Games</b></i><br />
+                <i><b>Supermicro Computers</b></i><br />
               </Typography>
               <Typography variant = 'p4'>
-              Junior Programmer
+              Application Engineer
               </Typography>
             </Box>
 
@@ -137,10 +131,10 @@ const leftContentBoxes = () => {
               <Box sx = {{mt: 2, justifyContent: 'flex-end', flexDirection:'column'}}>
                 <Typography variant = "p4">
                   <Box sx={{textAlign: 'right'}}>
-                    May 2021 - Sept 2022
+                    Sept 2024 - Present
                   </Box>
                   <Box sx={{textAlign: 'right'}}>
-                    Santa Rosa, CA
+                    San Jose, CA
                   </Box>
                 </Typography>
               </Box>
@@ -154,10 +148,14 @@ const leftContentBoxes = () => {
           {/* right Half - Job Description */}
           <Box sx = {{flexGrow: 1, maxWidth: 400}}>
             <Typography variant = "p4">
-            ◆ Designed C++ classes and functions as backend parents for Unreal Engine 5 elements <br/>
-            ◆ Learned and worked with many Unreal 5 systems like Behavior trees, Blueprints, UI plugins<br/>
-            ◆ Developed main menu, keybinding design, UI, level generation, and AI behavior<br/>
-            ◆ Used Perforce source control with continuous integration on a custom Jenkins server<br/>
+            ◆ Designed and maintained multiple internal full-stack applications to support ticket tracking, system validation, and host CPU Crash-dump tools<br/>
+            ◆ Implemented CI/CD pipelines using GitHub Actions to automatically test and deploy containerized applications, improving maintainability and team collaboration<br/>
+            ◆ Integrated Microsoft SSO authentication into internal tools, improving security and streamlining user access<br/>
+            ◆ Developed internal tools to validate GPU systems for RMA, streamline hiring workflows, and automate reproduction of customer-reported issues<br/>
+            ◆ Developed and expanded QA automation frameworks for validating IPMI, Redfish API, SNMP, and other BMC interfaces<br/>
+            ◆ Created graphical and functional specifications for the Chassis Management Module<br/>
+            ◆ Collaborated cross-functionally with product managers, RMA, sales, and engineers to resolve complex system-level issues and advise on Redfish/BMC behavior<br/>
+            ◆ Provided L2 support for enterprise customers, reproducing and debugging system-level issues across server platforms and reducing time-to-resolution through automation<br/>
             </Typography>
           </Box>
         </Box>
@@ -201,6 +199,13 @@ const leftContentBoxes = () => {
             {allLinks.github}
           </Typography>
         </Box>
+        <Box sx = {{minHeight: 50, display: 'flex', flexDirection: 'row'}}
+          alignItems = 'center'>
+          <LanguageIcon color = 'HomeFunctionalIcons'/>
+          <Typography variant = "p3" sx = {{pl: 2}}>
+          {allLinks.website}
+          </Typography>
+        </Box>
       </Box>
 
     </Box>
@@ -227,24 +232,13 @@ const rightContentBoxes = () => {
         flexDirection: 'row', justifyContent: 'space-between',
         lineHeight: 2, mt: 2}}>
 
-        {/* Left side box */}
-        <Box name = 'LangagesLeft'>
+        {/* Languages list */}
+        <Box name = 'LanguagesList'>
           <Typography variant = "p4">
-            {(Object.keys(languagesKnown)).map((element, index)=> {
+            {languagesKnown.map((element, index)=> {
               return(
-                <div key={index}>
-                  {element} 
-                </div>
-              )
-            })}
-          </Typography>
-        </Box>
-        {/* right side box */}
-        <Box align = 'right' name = 'LanguagesRight'>
-          <Typography variant = "p4">
-          {(Object.values(languagesKnown)).map((element, index)=> {
-              return(
-                <div key={index}>
+                <div key={index} style={{ display:'flex', alignItems:'center', marginBottom: '0.25rem' }}>
+                  <CircleIcon sx={{ width: 13, height: 13, mr: { xs: 0.5, tiny: 2 } }} />
                   {element}
                 </div>
               )
