@@ -159,6 +159,59 @@ const leftContentBoxes = () => {
             </Typography>
           </Box>
         </Box>
+
+        {/* Red Tide Games Job */}
+        <Box name='ExpSplitterBox' sx = {{display: 'flex',
+          flexDirection: {xs: 'column', tiny: 'row'}, justifyContent: 'space-between', mt: 3}}>
+
+          {/* Left Half - Job Details further divided into 2
+          border and margin at the bottom replace the divider between boxes
+          so it looks likes it 'flips' when hitting breakpoint 'tiny */}
+          <Box sx = {{flexGrow: 1, display: 'flex',
+            flexWrap: 'wrap',
+            minWidth: 170,
+            borderBottom: {xs:5, tiny: 0},
+            marginBottom: {xs:2, tiny: 0},
+            paddingBottom: {xs:2, tiny: 0}}}>
+
+            <Box sx = {{flexGrow: 1}} name='JobNameTitleBox'>
+              <Typography variant = "p3">
+                <i><b>Red Tide Games</b></i><br />
+              </Typography>
+              <Typography variant = 'p4'>
+              Junior Programmer
+              </Typography>
+            </Box>
+
+            <Box name='JobLocationDatesBox' sx = {{
+              flexGrow: 1}}>
+              <Box sx = {{mt: 2, justifyContent: 'flex-end', flexDirection:'column'}}>
+                <Typography variant = "p4">
+                  <Box sx={{textAlign: 'right'}}>
+                    May 2021 - Sept 2022
+                  </Box>
+                  <Box sx={{textAlign: 'right'}}>
+                    Santa Rosa, CA
+                  </Box>
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+  
+          {/* Spacing box between the halves, dissappears */}
+          <Box backgroundColor = 'HomeLeftPanel.contrastText'
+            sx = {{flexShrink: 1, minWidth: 5, ml: {xs:2, sm:4}, mr: {xs:2, sm:4},
+              display:{xs: 'none', tiny: 'flex'}}}/>
+          {/* right Half - Job Description */}
+          <Box sx = {{flexGrow: 1, maxWidth: 400}}>
+            <Typography variant = "p4">
+            ◆ Developed C++ gameplay systems for an Unreal Engine 5 racing game, including vehicle physics interactions, start-line systems, and collision handling<br/>
+            ◆ Implemented cross-platform networking using Epic Online Services for matchmaking and lobbies, handling 20+ concurrent players with sub-100ms latency<br/>
+            ◆ Collaborated with design and art teams to iterate on vehicle handling and track layouts, incorporating feedback from QA playtests<br/>
+            ◆ Optimized rendering performance and memory usage, maintaining 60+ FPS on target hardware platforms<br/>
+            </Typography>
+          </Box>
+        </Box>
       </Box>
 
 
